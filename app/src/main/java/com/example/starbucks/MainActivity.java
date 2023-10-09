@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = findViewById(R.id.button);
         TextView texto = findViewById(R.id.error);
 
-
+/*
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,10 +45,19 @@ public class MainActivity extends AppCompatActivity {
                     texto.setText(comprobacion);
                 }
             }
+        });*/
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.login);
+                comprobacion = "david";
+                cambiarPantalla(button);
+            }
         });
 
     }
-    public void cambiarPantalla (View view){
+   public void cambiarPantalla (View view){
         Intent i = new Intent(this, inicio.class);
         i.putExtra("USER", comprobacion);
         startActivity(i);

@@ -2,6 +2,7 @@ package com.example.starbucks;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -107,8 +108,8 @@ public class inicio extends AppCompatActivity {
                 imageView.setImageResource(R.drawable.product3);
                 nombreTextView.setText("Caramel Coffee");
                 descripcionTextView.setText("Un café suave y aterciopelado, realzado con un" +
-                        "delicioso jarabe de caramelo que aporta un dulzor sutil" +
-                        "y una nota caramelizada.");
+                        " delicioso jarabe de caramelo que aporta un dulzor sutil" +
+                        " y una nota caramelizada.");
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(inicio.this);
                 builder.setView(dialogView);
@@ -129,9 +130,89 @@ public class inicio extends AppCompatActivity {
                 imageView.setImageResource(R.drawable.product5);
                 nombreTextView.setText("Siroup Coffee");
                 descripcionTextView.setText("Una experiencia única que combina un café robusto" +
-                        "con un toque de jarabe de arce, brindando una dulzura natural" +
-                        "y un sabor ahumado.");
+                        " con un toque de jarabe de arce, brindando una dulzura natural" +
+                        " y un sabor ahumado.");
 
+                AlertDialog.Builder builder = new AlertDialog.Builder(inicio.this);
+                builder.setView(dialogView);
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+        cardViewMixedTentations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View dialogView = getLayoutInflater().inflate(R.layout.detalle_producto, null);
+                ImageView imageView = dialogView.findViewById(R.id.detalles_imagen);
+                TextView nombreTextView = dialogView.findViewById(R.id.detalles_nombre);
+                TextView descripcionTextView = dialogView.findViewById(R.id.detalles_descripcion);
+                imageView.setImageResource(R.drawable.product6);
+                nombreTextView.setText("Mixed Tentations");
+                descripcionTextView.setText("Una explosión de sabores que combina café, leche " +
+                        "y una selección de especias exóticas, creando una " +
+                        "experiencia sensorial inigualable.");
+                AlertDialog.Builder builder = new AlertDialog.Builder(inicio.this);
+                builder.setView(dialogView);
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+        final ViewGroup[] transitionContainer = new ViewGroup[1];
+
+        cardViewIcedMacchiato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View dialogView = getLayoutInflater().inflate(R.layout.detalle_producto, null);
+                ImageView imageView = dialogView.findViewById(R.id.detalles_imagen);
+                TextView nombreTextView = dialogView.findViewById(R.id.detalles_nombre);
+                TextView descripcionTextView = dialogView.findViewById(R.id.detalles_descripcion);
+                imageView.setImageResource(R.drawable.product8);
+
+                nombreTextView.setText("Iced Macchiato");
+                descripcionTextView.setText("Una variante refrescante de café, " +
+                        "donde el expreso se vierte sobre hielo y se corona " +
+                        "con una capa de leche espumosa.");
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(inicio.this);
+                builder.setView(dialogView);
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+        cardViewOreoTentations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View dialogView = getLayoutInflater().inflate(R.layout.detalle_producto, null);
+                ImageView imageView = dialogView.findViewById(R.id.detalles_imagen);
+                TextView nombreTextView = dialogView.findViewById(R.id.detalles_nombre);
+                TextView descripcionTextView = dialogView.findViewById(R.id.detalles_descripcion);
+                imageView.setImageResource(R.drawable.product4);
+                nombreTextView.setText("Oreo Tentation");
+                descripcionTextView.setText("Una creación tentadora que fusiona la cremosidad " +
+                        "de la leche con trozos de galleta Oreo, creando una experiencia " +
+                        "indulgente y deliciosa.");
+                AlertDialog.Builder builder = new AlertDialog.Builder(inicio.this);
+                builder.setView(dialogView);
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+
+        cardViewAppleSmoothie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View dialogView = getLayoutInflater().inflate(R.layout.detalle_producto, null);
+                ImageView imageView = dialogView.findViewById(R.id.detalles_imagen);
+                TextView nombreTextView = dialogView.findViewById(R.id.detalles_nombre);
+                TextView descripcionTextView = dialogView.findViewById(R.id.detalles_descripcion);
+                imageView.setImageResource(R.drawable.product7);
+                nombreTextView.setText("Apple Smoothie");
+                descripcionTextView.setText("Una bebida refrescante que combina trozos " +
+                        "de manzana fresca con yogurt y hielo, resultando en una mezcla " +
+                        "suave y revitalizante.");
                 AlertDialog.Builder builder = new AlertDialog.Builder(inicio.this);
                 builder.setView(dialogView);
                 AlertDialog dialog = builder.create();
@@ -140,27 +221,3 @@ public class inicio extends AppCompatActivity {
         });
     }
 }
-
-/*
-* Una deliciosa mezcla de café fuerte con un toque de chocolate, creando una experiencia única para los amantes del chocolate y el café.
-Cappuccino:
-
-Un clásico italiano, el cappuccino combina un expreso fuerte con leche vaporizada y espuma de leche, resultando en una bebida cremosa y equilibrada.
-Caramel Coffee:
-
-Un café suave y aterciopelado, realzado con un delicioso jarabe de caramelo que aporta un dulzor sutil y una nota caramelizada.
-Oreo Tentation:
-
-Una creación tentadora que fusiona la cremosidad de la leche con trozos de galleta Oreo, creando una experiencia indulgente y deliciosa.
-Siroup Coffee:
-
-Una experiencia única que combina un café robusto con un toque de jarabe de arce, brindando una dulzura natural y un sabor ahumado.
-Mixed Sensations:
-
-Una explosión de sabores que combina café, leche y una selección de especias exóticas, creando una experiencia sensorial inigualable.
-Apple Smoothie:
-
-Una bebida refrescante que combina trozos de manzana fresca con yogurt y hielo, resultando en una mezcla suave y revitalizante.
-Ice Macchiato:
-
-Una variante refrescante de café, donde el expreso se vierte sobre hielo y se corona con una capa de leche espumosa.*/
